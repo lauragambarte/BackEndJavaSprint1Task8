@@ -23,9 +23,14 @@ public class Main {
     public static List<String> citiesWithO(List<String> cities) {
         //FILTER METHOD: ALLOWS ME TO PICK A STREAM OF ELEMENTS THAT ACCOMPLISH A PREDICATE(TAKES ONE INPUT & RETURN T O F.
 //I create a stream with all the objects of a list:  Stream<String> streamVariable = list.stream()
-        Stream<String> streamVariable = cities.stream();
+        return cities.stream()
+                .filter(element -> element.contains("o"))
+                .toList();
+
+       /* Stream<String> streamVariable = cities.stream();
         Stream<String> filteredCitiesWithO = streamVariable.filter(element -> element.contains("o"));
         //I convert the stream into a list to obtain the values needed for RETURN.
         return filteredCitiesWithO.toList();
+    }*/
     }
 }
